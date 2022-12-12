@@ -1,0 +1,162 @@
+/* - Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600 */
+
+:root {
+  /* Colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --light-gray: hsl(0, 0%, 98%);
+  /* Font Family */
+  --font-family: "Poppins", sans-serif;
+  /* Font Weight */
+  --fw-light: 200;
+  --fw-normal: 400;
+  --fw-bold: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-family);
+  font-weight: var(--fw-normal);
+  background-color: var(--light-gray);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 32rem;
+}
+
+.content {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.content__motto {
+  font-size: 2.5rem;
+  font-weight: var(--fw-light);
+  color: var(--dark-blue);
+}
+
+.content__powered {
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--dark-blue);
+  margin-bottom: 2rem;
+}
+
+.content__description {
+  color: var(--grayish-blue);
+}
+
+.cards {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.card {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  height: 25rem;
+  position: relative;
+}
+
+.supervisor {
+  border-top: 5px solid var(--cyan);
+}
+
+.teambuilder {
+  border-top: 5px solid var(--red);
+}
+
+.karma {
+  border-top: 5px solid var(--orange);
+}
+
+.calculator {
+  border-top: 5px solid var(--blue);
+}
+
+.card__title {
+  color: var(--dark-blue);
+  font-weight: var(--fw-bold);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card__icon {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.card__description {
+  color: var(--grayish-blue);
+}
+
+@media screen and (min-width: 980px) {
+  html {
+    font-size: 70%;
+  }
+  main {
+    width: auto;
+    max-width: 100rem;
+  }
+  .card {
+    width: 28rem;
+    height: 20rem;
+    font-size: 1rem;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .content__description {
+    width: 50rem;
+    margin: 0 auto;
+  }
+}
